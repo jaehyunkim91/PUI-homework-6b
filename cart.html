@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muddy Paws Adventure | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="./cart.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="cartContainer">
+      <div class="cartLeftCol">
+        <div class="logo">
+          <a href="index.html">
+            <img src="image/logo.png" alt="Muddy Paws Logo" />
+          </a>
+        </div>
+        <div class="cartSpacer"></div>
+        <div class="inputWrapper">
+          <h2>Contact Info.</h2>
+          <div class="customerInputLong">View
+            <input type="text" placeholder="email address" />
+          </div>
+          <h2>Your Info.</h2>
+          <div class="fullName">
+            <div class="customerInputShort">
+              <input type="text" placeholder="first name" />
+            </div>
+            <div class="customerInputShort">
+              <input type="text" placeholder="last name" />
+            </div>
+          </div>
+          <div class="customerInputLong">
+            <input type="text" placeholder="address 1" />
+          </div>
+          <div class="customerInputLong">
+            <input type="text" placeholder="address 2" />
+          </div>
+          <div class="customerInputLong">
+            <input type="text" placeholder="apartment / unit" />
+          </div>
+          <div class="customerInputLong">
+            <input type="text" placeholder="city" />
+          </div>
+          <div class="dropDown">
+            <div class="country">
+              <form class="countryList">
+                <select name="country">
+                  <option value="u.s.">U.S.</option>
+                  <option value="canada">Canada</option>
+                  <option value="mexico">Mexico</option>
+                  <option value="cuba">Cuba</option>
+                  <option value="hondurs">Honduras</option>
+                </select>
+              </form>
+            </div>
+            <div class="state">
+              <form class="stateList">
+                <select name="state">
+                  <option value="NY.">NY</option>
+                  <option value="PA">PA</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NV">NV</option>
+                  <option value="MA">MA</option>
+                </select>
+              </form>
+            </div>
+          </div>
+          <div class="cartSpacer2"></div>
+          <a href="" class="continueBilling">Continue To Billing</a>
+        </div>
+      </div>
+      <div class="cartRightCol">
+        <div class="cartContentContainer">
+          <h1>Your Cart</h1>
+          <span id="itemNumber"></span>
+          <hr />
+          <ul id="itemList"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

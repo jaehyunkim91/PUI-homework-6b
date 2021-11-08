@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Muddy Paws Adventure</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="./main.js" charset="utf-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+    <div class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="image/logo.png" alt="Muddy Paws Logo" />
+        </a>
+      </div>
+      <div class="searchProfileContainer">
+        <div class="searchBox">
+          <input type="text" placeholder="search..." />
+        </div>
+        <div class="profileContainer">
+          <a href="">
+            <img src="image/myAccount.png" alt="myaccount" />
+          </a>
+          <a href="cart.html">
+            <img src="image/cart.png" alt="cart" />
+          </a>
+          <span id="cartNumber"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav>
+      <a href="">Harness</a>
+      <a href="">Leash</a>
+      <a href="">Storage</a>
+      <a href="">Gear</a>
+      <a href="">Toys</a>
+    </nav>
+
+    <!-- Filter Section -->
+    <div class="filterSection">
+      <div class="leftContainer">
+        <h1>Shop Harness</h1>
+        <p>
+          <a href="index.html"> Home - </a>
+          All - Harness
+        </p>
+      </div>
+      <div class="rightContainer">
+        <form class="filterBy">
+          <label for="filter">Filter By: </label>
+          <select name="colors">
+            <option value="all">all</option>
+            <option value="strawberry">strawberry</option>
+            <option value="blackberry">blackberry</option>
+            <option value="crazy berry">crazy berry</option>
+            <option value="fire orange">fire orange</option>
+          </select>
+          <select name="size">
+            <option value="all">all</option>
+            <option value="tiny">tiny</option>
+            <option value="small">small</option>
+            <option value="medium">medium</option>
+            <option value="large">large</option>
+          </select>
+          <br />
+          <label for="sort"> Price By: </label>
+          <select name="price">
+            <option value="nonr">none</option>
+            <option value="lowest">lowest</option>
+            <option value="highest">highest</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <!--- Gird for Products -->
+    <div class="grid">
+      <div class="gridCell">
+        <a href="detail.html">
+          <img src="image/truFitHarness.png" alt="harness" />
+        </a>
+        <h2>Tru-fit Dog Harness</h2>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span> (31) </span>
+        <p>$21.99</p>
+      </div>
+      <div class="gridCell">
+        <a href=""> <img src="image/comfortHarness.png" alt="harness" /></a>
+        <h2>Comfort Dog Harness</h2>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span> (27) </span>
+        <p>$45.99</p>
+      </div>
+      <div class="gridCell">
+        <a href=""> <img src="image/nylonDogHarness.png" alt="harness" /> </a>
+        <h2>Nylon Dog Harness</h2>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span> (25) </span>
+        <p>$13.09</p>
+      </div>
+      <div class="gridCell">
+        <a href="">
+          <img src="image/stretchyHarness.png" alt="harness" />
+        </a>
+        <h2>Stretchy Dog Harness</h2>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span> (32) </span>
+        <p>$15.00</p>
+      </div>
+      <div class="gridCell">
+        <a href=""> <img src="image/leatherDogHarness.png" alt="harness" /> </a>
+        <h2>Leather Dog Harness</h2>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span> (54) </span>
+        <p>$13.99</p>
+      </div>
+      <div class="gridCell">
+        <a href=""> <img src="image/grailHarness.png" alt="harness" /> </a>
+        <h2>Tru-fit Dog Harness</h2>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span> (2) </span>
+        <p>$12.99</p>
+      </div>
+      <div class="gridCell">
+        <a href=""> <img src="image/pupHarness.png" alt="harness" /> </a>
+        <h2>Pug Harness</h2>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span> (17) </span>
+        <p>$29.99</p>
+      </div>
+    </div>
+    <!--- Footer-->
+    <div class="footer">
+      <div class="linkContainer">
+        <div class="link-col">
+          <h3>SHOP</h3>
+          <ul>
+            <li>Harness</li>
+            <li>Leash</li>
+            <li>Storage</li>
+            <li>Gears</li>
+            <li>Toys</li>
+          </ul>
+        </div>
+        <div class="link-col">
+          <h3>INFO</h3>
+          <ul>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Reviews</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="link-col">
+          <h3>HELP</h3>
+          <ul>
+            <li>Contact</li>
+            <li>FAQ</li>
+            <li>Account</li>
+            <li>Shipping</li>
+          </ul>
+        </div>
+      </div>
+      <div class="followUs">
+        <h1>Follow us</h1>
+        <a href="">
+          <img src="image/facebookLogo.png" alt="facebook" />
+        </a>
+        <a href="">
+          <img src="image/twitterLogo.png" alt="twitter" />
+        </a>
+        <a href="">
+          <img src="image/instagramLogo.png" alt="instagram" />
+        </a>
+        <p>
+          Get exclusive discounts and <br />
+          early bird sale by registering
+        </p>
+        <a href="" class="signUp">Sign Up Now</a>
+      </div>
+    </div>
+  </body>
+</html>

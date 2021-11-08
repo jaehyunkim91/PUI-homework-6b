@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tru-Fit Dog Harness</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="./main.js" charset="utf-8"></script>
+    <script defer src="./detail.js" charset="utf-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+      de
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+    <div class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img src="image/logo.png" alt="Muddy Paws Logo" />
+        </a>
+      </div>
+      <div class="searchProfileContainer">
+        <div class="searchBox">
+          <input type="text" placeholder="search..." />
+        </div>
+        <div class="profileContainer">
+          <a href="">
+            <img src="image/myAccount.png" alt="myaccount" />
+          </a>
+          <a id="cartBtn" href="cart.html">
+            <img src="image/cart.png" alt="cart" />
+          </a>
+          <span id="cartNumber"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav>
+      <a href="">Harness</a>
+      <a href="">Leash</a>
+      <a href="">Storage</a>
+      <a href="">Gear</a>
+      <a href="">Toys</a>
+    </nav>
+
+    <!-- Filter Section -->
+    <div class="filterSection">
+      <div class="leftContainer">
+        <h1>Tru-fit Harness</h1>
+        <p>
+          <a href="index.html"> Home - </a>
+          All -
+          <a href="products.html"> Harness - </a>
+          Tru-fit Harness
+        </p>
+      </div>
+    </div>
+    <!--- Gird for Product Details-->
+    <div class="detailsGrid">
+      <div class="grid-cell-1">
+        <div class="stackedThumbnailFlexContainer">
+          <img id="firstImg" src="image/detailPageSmall1.png" alt="thumbnail" />
+          <img
+            id="secondImg"
+            src="image/detailPageSmall2.png"
+            alt="thumbnail"
+          />
+          <img id="thirdImg" src="image/detailPageSmall3.png" alt="thumbnail" />
+        </div>
+        <div class="singleThumbnailFlexContainer">
+          <img id="fourthImg" src="image/detailPageLarge.png" alt="thumbnail" />
+        </div>
+      </div>
+      <div class="grid-cell-2">
+        <p>Essential</p>
+        <h1>Tru-fit Dog <br />Harness</h1>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"> </span>
+        (31)
+        <div class="spacer1"></div>
+        <div class="colorOptions">
+          <div>Color:</div>
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="strawberry"
+              name="colors"
+              value="strawberry"
+            />
+            <label id="color1" for="strawberry" onclick="toStrawberry()">
+            </label>
+            <input
+              type="radio"
+              id="blackberry"
+              name="colors"
+              value="blackberry"
+            />
+            <label
+              id="color2"
+              for="blackberry"
+              onclick="toBlackberry()"
+            ></label>
+            <input
+              type="radio"
+              id="crazyberry"
+              name="colors"
+              value="crazyberry"
+            />
+            <label
+              id="color3"
+              for="crazyberry"
+              onclick="toCrazyberry()"
+            ></label>
+            <input
+              type="radio"
+              id="fireorange"
+              name="colors"
+              value="fireorange"
+            />
+            <label
+              id="color4"
+              for="fireorange"
+              onclick="toFireOrange()"
+            ></label>
+            <input
+              type="radio"
+              id="spacegrey"
+              name="colors"
+              value="spacegrey"
+            />
+            <label id="color5" for="spacegrey" onclick="toSpaceGrey()"></label>
+          </div>
+        </div>
+        <div class="sizeOptions">
+          <div>Size:</div>
+          <form id="size-selector" class="size">
+            <select id="sizeSelect" name="size">
+              <option id="none" value="none">select one</option>
+              <option id="tiny" value="tiny">tiny</option>
+              <option id="small" value="small">small</option>
+              <option id="medium" value="medium">medium</option>
+              <option id="large" value="large">large</option>
+            </select>
+          </form>
+        </div>
+        <div class="spacer2"></div>
+        <div class="ATCContainer">
+          <h2>$13.09</h2>
+          <div>
+            <button class="ATCbutton" onclick="onClickAddToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="grid-cell-3">
+        <div class="lineContainer">
+          <div>Why Tru-fit harness?</div>
+          <img src="image/Expand.png" alt="vector" />
+        </div>
+        <div class="lineContainer">
+          <div>Which size is right for him/her?</div>
+          <img src="image/Expand.png" alt="vector" />
+        </div>
+        <div class="lineContainer">
+          <div>How to use it?</div>
+          <img src="image/Expand.png" alt="vector" />
+        </div>
+      </div>
+      <div class="grid-cell-4">
+        The Tru Fit Smart Harness with quick release buckles is designed to do
+        one thing: get on fast, so you and your dog can get going. Just slip it
+        over his head and clip a couple buckles, and you’re ready. And when
+        you're done with your adventure, one press has him out just as quickly
+      </div>
+    </div>
+    <!-- customer review-->
+    <div class="reviewBackground">
+      <div class="reviewCol">
+        <h3>Jennie K.</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p>
+          "My pooch loves it !just took a chance on this and got a small. My
+          puppy is only 8 weeks old and it fits perfect, she is a mix of border
+          collie and aussie. If it was any bit smaller it wouldn't fit. It will
+          only fit her for a short time since she will be growing fast"
+        </p>
+      </div>
+      <div class="reviewCol">
+        <h3>Irene D.</h3>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p>
+          "My pooch loves it !just took a chance on this and got a small. My
+          puppy is only 8 weeks old and it fits perfect, she is a mix of border
+          collie and aussie. If it was any bit smaller it wouldn't fit. It will
+          only fit her for a short time since she will be growing fast"
+        </p>
+      </div>
+    </div>
+    <!--- Footer-->
+    <div class="footer">
+      <div class="linkContainer">
+        <div class="link-col">
+          <h3>SHOP</h3>
+          <ul>
+            <li>Harness</li>
+            <li>Leash</li>
+            <li>Storage</li>
+            <li>Gears</li>
+            <li>Toys</li>
+          </ul>
+        </div>
+        <div class="link-col">
+          <h3>INFO</h3>
+          <ul>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Reviews</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+        <div class="link-col">
+          <h3>HELP</h3>
+          <ul>
+            <li>Contact</li>
+            <li>FAQ</li>
+            <li>Account</li>
+            <li>Shipping</li>
+          </ul>
+        </div>
+      </div>
+      <div class="followUs">
+        <h1>Follow us</h1>
+        <a href="">
+          <img src="image/facebookLogo.png" alt="facebook" />
+        </a>
+        <a href="">
+          <img src="image/twitterLogo.png" alt="twitter" />
+        </a>
+        <a href="">
+          <img src="image/instagramLogo.png" alt="instagram" />
+        </a>
+        <p>
+          Get exclusive discounts and <br />
+          early bird sale by registering
+        </p>
+        <a href="" class="signUp">Sign Up Now</a>
+      </div>
+    </div>
+  </body>
+</html>
