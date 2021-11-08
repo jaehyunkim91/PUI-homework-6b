@@ -1,4 +1,4 @@
-//Get rid of the border color(blue) of initial color option when a new color option is clicked
+//removing the border color(blue) of initial color option when a new color option is clicked
 function removeBorder() {
   if (document.querySelector("label")) {
     document.querySelector("label").style.border = "none"
@@ -67,21 +67,26 @@ function toSpaceGrey() {
   }
 }
 
+//creating item object with id, color, and size
 function Item(id, color, size) {
   this.id = id
   this.color = color
   this.size = size
 }
 
+// assigning random id to object instances in order to make remove function work
 const currentItem = new Item(Math.random())
 
+//assigning value of color to object instance's color attribute
 function selectColor(color) {
   currentItem.color = color
 }
 
+//assigning value of size to object instance's size attribute
 function selectSize(size) {
   currentItem.size = size
 }
+
 
 const sizeSelector = document.getElementById('size-selector');
 sizeSelector.addEventListener('change', function(e) {
@@ -89,6 +94,7 @@ sizeSelector.addEventListener('change', function(e) {
   selectSize(selected)
 });
 
+//add to cart function (set to a blank array if empty)
 function onClickAddToCart() {
   const cart = JSON.parse(localStorage.getItem('cart')) || []
 
@@ -98,8 +104,6 @@ function onClickAddToCart() {
 
   cartNumElem.innerHTML = cart.length
 
-  // refresh page to generate new "currentItem"
-  // this is only for testing purposes, since we
-  // want to simulate multiple products in the cart
+  // this refreshes the page to generate new "currentItem"; it is only for testing purposes, since I want to simulate multiple products in the cart
   window.location.reload()
 }

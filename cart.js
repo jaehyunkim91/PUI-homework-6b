@@ -1,8 +1,10 @@
 const cart = JSON.parse(localStorage.getItem('cart')) || []
 
+//display # of items in cart using array length
 const itemNumber = document.getElementById("itemNumber")
 itemNumber.innerHTML = "Item Number: " + cart.length;
 
+//add item to array using for loop in the unordered list on html; also embed remove button for each list added 
 const itemList = document.getElementById("itemList")
 for (let i = 0; i < cart.length; i += 1) {
   const item = cart[i]
@@ -21,23 +23,4 @@ for (let i = 0; i < cart.length; i += 1) {
   })
   elem.appendChild(btn)
   itemList.appendChild(elem)
-}
-
-//view item
-function viewItem() {
-  let arr = [];
-  for (let i = 0; i < localStorage.length; i++) {
-    let obj = {
-      item: localStorage.getItem(localStorage.key(i))
-    }
-    arr.push(obj);
-  }
-  document.querySelector(".itemContainer").innerHTML = JSON.stringify(arr);
-};
-
-//remove item
-function removeItem() {
-  localStorage.clear();
-  document.querySelector(".itemContainer").innerHTML = null;
-  window.location.reload()
 }
